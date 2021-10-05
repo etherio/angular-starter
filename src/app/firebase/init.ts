@@ -1,15 +1,16 @@
-import { AuthService } from "./auth.service";
+import firebase from "firebase/app";
+import "firebase/auth";
 
-export function initializeApp(authService: AuthService) {
+export function initializeApp() {
   const firebaseConfig = {
-    apiKey: "AIzaSyBgkNJBP6moWUoBEuOjBd2Yg1EuKsPHx1Q",
-    appId: "1:499374745893:web:ae59292b3d99c41b7e12cc",
-    authDomain: "omg-baby.firebaseapp.com",
-    databaseURL: "https://omg-baby-default-rtdb.firebaseio.com",
-    measurementId: "G-VEF70B6QLW",
-    messagingSenderId: "499374745893",
-    projectId: "omg-baby",
-    storageBucket: "omg-baby.appspot.com",
+    apiKey: "AIzaSyBLnixFP-rLWHOOEvxC2pjF1ocCrH2qt1A",
+    authDomain: "etherio-pay.firebaseapp.com",
+    databaseURL: "https://etherio-pay-default-rtdb.firebaseio.com",
+    projectId: "etherio-pay",
+    storageBucket: "etherio-pay.appspot.com",
+    messagingSenderId: "927983401567",
+    appId: "1:927983401567:web:3323be6b7ee9a37a5fb9ea",
+    measurementId: "G-SQ08BEE4GJ",
   };
-  return () => authService.initializeApp(firebaseConfig);
+  return () => firebase.initializeApp(firebaseConfig);
 }
